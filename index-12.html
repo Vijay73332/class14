@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan Animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div[data-fan="my-fan"]{
+            
+            
+        }
+        .fan-img {
+            background-image: url(./images.jpeg);
+            width: 300px;
+            height: 300px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 100px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation-name: fan;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-play-state: paused;
+        
+        }
+        @keyframes fan {
+            0%{
+                transform: rotateZ(0deg);
+            }
+            100%{
+
+                transform: rotateZ(359deg);
+
+
+            }
+            
+        }
+        
+    </style>
+    <script>
+        function x(elem){
+            return document.querySelector(elem)
+        }
+        
+        function startFan(speed){
+            if (speed==0){
+                document.querySelector("#fan-box").style.animationPlayState="paused";
+                
+            }
+
+           else if(speed == 1){
+                x('[data-fan="my-fan"]').style.animationPlayState="running";
+                x('[data-fan="my-fan"]').style.animationDuration="0.3s";
+                
+            } else if(speed==2){
+                x('[data-fan="my-fan"]').style.animationPlayState="running";
+                x('[data-fan="my-fan"]').style.animationDuration="0.5s";
+                
+                
+
+            }
+            else{
+                document.getElementById("fan-box").style.animationPlayState="running";
+                document.getElementById("fan-box").style.animationDuration="0.1s";
+                
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div id="fan-box" class="fan-img" data-fan="my-fan">
+                
+    </div>
+    <div style="text-align:center;">
+        <button onclick="startFan(0)">STOP</button>
+        <button onclick="startFan(1)">1</button>
+        <button onclick="startFan(2)">2</button>
+        <button onclick="startFan(3)">3</button>
+        
+    </div>
+</body>
+</html>

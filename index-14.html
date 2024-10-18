@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function submitForm(e){
+            e.preventDefault();
+         let number1=document.getElementById('n1').value;
+         let number2=document.querySelector('[data-n2="n2"]').value;
+         let result= (parseInt(number1)+parseInt(number2));
+        alert(result);
+         localStorage.setItem('result',result);
+         return false;
+        
+         
+        }
+        
+       
+    </script>
+</head>
+<body>
+    <div>
+        <form onsubmit=" return submitForm()">
+            <input type="text" id="n1" name="num1" placeholder="Enter The Value 1 ">
+            <input type="text" data-n2="n2" name="num2" placeholder="Enter The Value 2 ">
+            <input type="text" data-n2="n3" name="num3" placeholder="Enter The Value 3 ">
+            <input type="submit">
+        </form>
+
+        <br><br><br><br><br><br>
+        <hr>
+        <form >
+            <input type="text" name="num1" placeholder="Enter The Value">
+             <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
