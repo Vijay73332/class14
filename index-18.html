@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <script>
+        var h=document.createElement('header');
+        h.setAttribute('class','header-v')
+        var m=document.createElement('div')
+        var f=document.createElement('footer')
+        
+      
+        h.innerHTML="Header";
+        
+       
+
+        document.getElementById("body").appendChild(h);
+        document.getElementById("body").appendChild(m);
+
+        document.querySelector('header.header-v ~ div').setAttribute('class','a_main');
+
+    var x= document.getElementsByClassName('a_main');
+   x[0].style.color="red";
+        document.getElementById("body").appendChild(f);
+        
+        document.querySelector('div').innerHTML="Main Area";
+       var fe=document.querySelector('div ~ footer');
+        fe.innerHTML="Footer Area";
+        var b=document.createElement('button');
+        b.innerHTML="Click Me!";
+        console.log(b)
+        fe.appendChild(b);
+       var be= document.getElementsByTagName('button');
+       console.log(be);
+    //    function byte(){
+
+    //    }
+    //    function(){
+
+    //    }
+       be[0].addEventListener('click',function(){
+    h.style.color="green";
+    h.style.fontSize="72px";
+
+       })
+    </script>
+    
+</body>
+</html>
