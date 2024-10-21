@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Using Javascript</title>
+</head>
+<body id="v-body">
+    <script>
+        //create header element/tag using js//
+       var h=document.createElement('header');
+       h.innerHTML="Header";
+       document.getElementById("v-body").appendChild(h);
+       let y=document.querySelector('header').setAttribute('class','header-v')
+       document.body.style.margin="0px";
+       var x=document.getElementsByClassName('header-v');
+       x[0].style.width="100%";
+       x[0].style.height="200px";
+       x[0].style.border="5px solid gray";
+       x[0].style.textAlign="center";
+      
+var x=document.getElementsByTagName('header');
+x[0].style.display="flex";
+       x[0].style.alignItems="center";
+       x[0].style.justifyContent="center";
+       x[0].style.fontSize="30px";
+       x[0].style.color="green";
+       x[0].style.textTransform="uppercase";
+       let f=document.createElement('footer');
+       f.innerHTML="Footer";
+       let n=document.createElement('nav');
+       n.innerHTML="Navbar";
+       var aside1=document.createElement('aside');
+       aside1.innerHTML="Aside1"
+       var section=document.createElement('section');
+       section.innerHTML="Section";
+
+       var aside2=document.createElement('aside');
+       aside2.innerHTML="Aside2"
+       
+
+    
+
+
+
+
+
+       document.body.appendChild(n);
+       document.body.appendChild(aside1);
+       document.body.appendChild(section);
+       document.body.appendChild(aside2);
+       var arr =document.querySelectorAll('aside');
+          arr.forEach(function(currentValue,index,arr){
+               arr[index].style.display="inline-block";
+          })
+       document.querySelector('section').style.display="inline-block";
+       
+       document.body.appendChild(f);
+       var x=document.querySelectorAll('footer');
+       x[0].setAttribute('data-foot','foot1');
+       document.querySelector('footer[data-foot="foot1"]').style.textAlign="center";
+       document.querySelector('[data-foot="foot1"]').style.color="green";
+       document.querySelector('[data-foot]').style.lineHeight="200px";
+        var f1= document.querySelector('footer');
+        f1.style.width="100%";
+        f1.display="flex";
+        f1.justifyContent="center";
+        f1.alignItems="center";
+        f1.style.height="150px"
+        f1.style.border="5px solid gray";
+
+
+
+    </script>
+</body>
+</html>

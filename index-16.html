@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Effect</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        body{
+            background-color: black;
+        }
+        .my-span{
+            font-size: 6em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 900;
+            color:#fff;
+            padding-top:200px;
+            padding-left: 100px;
+            display: block;
+
+        }
+        .my-span >span:first-child{
+            
+            color: #FD2155;
+            text-shadow: -9px 0px 0px #05FDD8;
+            .poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+.my-span span{
+    float: left;
+    transition: all 1s linear;
+    
+}
+.my-span > span:not(.my-span > :first-child){
+
+
+}
+            
+
+        }
+    </style>
+</head>
+<body>
+    <span class="my-span">
+        <span>J</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+    </span>
+</body>
+</html>
