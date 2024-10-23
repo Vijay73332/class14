@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document-Js-Dom</title>
+</head>
+
+<body>
+    <div class="gp" id="grandparent">
+        grand-p
+        <div class="p">
+            parent
+            <div class="c">
+                child
+                <div class="gc gc1">
+                    grand-child-1
+
+                </div>
+                <div class="gc gc2">
+                    grand-child-2
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+
+  gc=document.querySelector('.gc');
+  gc.closest('.gp').style.border="2px solid gray";
+  gc.closest('.p').style.border="3px solid green";
+  gc.closest('.c').style.backgroundColor="gray";
+  gc.closest('.gc').style.backgroundColor="blue";
+  p=document.getElementById('grandparent');
+  arr=p.querySelectorAll('.gc');
+  arr.forEach(function(currentElement,index,arr) {
+    currentElement.style.color="Orange";
+    console.log(currentElement);
+    
+  });
+  
+console.log(arr);
+ var arr;
+ var p;
+  
+
+
+  
+
+
+
+
+
+
+
+var gc;
+
+    
+ 
+     
+    </script>
+</body>
+<script>
+    
+    
+    
+   
+
+</script>
+</body>
+</html>
